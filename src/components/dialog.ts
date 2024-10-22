@@ -1,6 +1,7 @@
 import { addDialogButtons } from "../utils/dialog.util";
 import { addDraggableFeature, addMinimizeFeature } from "../utils/window.util";
 import { listenListAppear } from "../utils/lessons.util";
+import { consoleLicense } from "../utils/license.util";
 
 export function createDialog() {
   const dialog = document.createElement("div");
@@ -30,3 +31,4 @@ function createDialogContent() {
 }
 
 listenListAppear();
+consoleLicense();
