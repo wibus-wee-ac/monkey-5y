@@ -9,12 +9,24 @@ export function addDialogButtons(dialog: HTMLElement) {
       restoreWatchedLessons();
     }},
     { className: "start-watching", text: "开始观看", onClick: () => {
+      if (localStorage.getItem("isStartedLesson")) {
+        alert("你已经开始了刷课会话，请先结束刷课会话");
+        return;
+      }
+      if (localStorage.getItem("currentLesson")) {
+        localStorage.setItem("isStartedLesson", "true");
+        location.reload();
+        return;
+      }
       const selectedLessons = getSelectedLessons();
       autoWatchVideos(selectedLessons);
     }},
     { className: "end-session", text: "结束刷课会话", onClick: () => {
       localStorage.removeItem("watchedLessons");
       localStorage.removeItem("currentLesson");
+      localStorage.removeItem("isStartedLesson");
+    }},
+    { className: "toggle-watching", text: "暂停刷课", onClick: () => {
       localStorage.removeItem("isStartedLesson");
     }}
   ];
