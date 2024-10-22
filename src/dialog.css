@@ -122,10 +122,28 @@
   align-items: center;
 }
 
-/* 在现有的 CSS 中添加以下样式 */
-
 .chapter-checkbox,
 .sub-chapter-checkbox,
 .lesson-checkbox {
   margin-right: 5px;
+}
+
+.minimize-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  padding: 0;
+}
+
+.minimize-button:hover {
+  background-color: #e0e0e0;
 }

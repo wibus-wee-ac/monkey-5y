@@ -1,5 +1,5 @@
 import { addDialogButtons } from "../utils/dialog.util";
-import { addDraggableFeature } from "../utils/draggable.util";
+import { addDraggableFeature, addMinimizeFeature } from "../utils/window.util";
 import { listenListAppear } from "../utils/lessons.util";
 
 export function createDialog() {
@@ -10,12 +10,14 @@ export function createDialog() {
 
   addDialogButtons(dialog);
   addDraggableFeature(dialog);
+  addMinimizeFeature(dialog);
 }
 
 function createDialogContent() {
   return `
     <div class="dialog-header">
       <h2>5y 学习平台. 自助上课助手</h2>
+      <button class="minimize-button">-</button>
     </div>
     <div class="dialog-body">
       <p>这个平台奇奇怪怪的，我还要给你们抹屁股. 气死我了这个东西</p>

@@ -1,9 +1,17 @@
+/**
+ * 显示崩溃警告并清除本地存储
+ * @param {string} varName - 未找到的变量名
+ */
 export function crashWarning(varName: string) {
   alert(`无法找到 ${varName}，这不是预期行为`);
   localStorage.removeItem("watchedLessons");
   localStorage.removeItem("currentLesson");
 }
 
+/**
+ * 自动观看视频
+ * @param {any[]} selectedLessons - 选中的课程列表
+ */
 export async function autoWatchVideos(selectedLessons: any[]) {
   localStorage.setItem("watchedLessons", JSON.stringify(selectedLessons));
   console.log("记录本次刷课会话的选择", selectedLessons);
@@ -36,7 +44,9 @@ export async function autoWatchVideos(selectedLessons: any[]) {
   startListeningVideoAndTryingToWatchAnotherVideoAfterFinished();
 }
 
-
+/**
+ * 开始监听视频并尝试在视频结束后观看另一个视频
+ */
 export function startListeningVideoAndTryingToWatchAnotherVideoAfterFinished() {
   localStorage.setItem("isStartedLesson", "true");
 
@@ -62,7 +72,9 @@ export function startListeningVideoAndTryingToWatchAnotherVideoAfterFinished() {
   }
 }
 
-
+/**
+ * 监听视频结束
+ */
 export function listenVideoFinished() {
   let currentVideo: HTMLVideoElement | null = null;
   let observer: MutationObserver | null = null;

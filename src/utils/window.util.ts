@@ -41,3 +41,20 @@ export function addDraggableFeature(dialog: HTMLElement) {
   document.addEventListener("mousemove", drag);
   document.addEventListener("mouseup", dragEnd);
 }
+
+export function addMinimizeFeature(dialog: HTMLElement) {
+  const minimizeButton = dialog.querySelector('.minimize-button') as HTMLButtonElement;
+  const dialogBody = dialog.querySelector('.dialog-body') as HTMLElement;
+  let isMinimized = false;
+
+  minimizeButton.addEventListener('click', () => {
+    if (isMinimized) {
+      dialogBody.style.display = 'block';
+      minimizeButton.textContent = '-';
+    } else {
+      dialogBody.style.display = 'none';
+      minimizeButton.textContent = '+';
+    }
+    isMinimized = !isMinimized;
+  });
+}
