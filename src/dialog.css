@@ -1,0 +1,131 @@
+.auto-study-dialog {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 16px;
+  background-color: #fcfcfcc3;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.394);
+  border: 1px solid #0e0e0e39;
+  backdrop-filter: blur(10px);
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 1000;
+  resize: both;
+  overflow: auto;
+  min-width: 200px;
+  min-height: 100px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.dialog-header {
+  position: sticky;
+  top: -16px;
+  cursor: move;
+  user-select: none;
+  padding: 10px;
+  background-color: rgb(227, 227, 227);
+  margin: -16px -16px 10px -16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dialog-header h2 {
+  margin: 0;
+}
+
+.check-all {
+  margin-top: 10px;
+}
+
+.info {
+  margin-bottom: 10px;
+}
+
+.info-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info-total {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.info-chapter-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+.chapter-content {
+  margin-left: 20px;
+}
+
+.info-sub-chapter-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #393838;
+  margin: 10px 0 5px;
+}
+
+.sub-chapter-content {
+  margin-left: 20px;
+}
+
+.info-sub-chapter-lessons {
+  font-size: 14px;
+  color: #313131;
+  margin-bottom: 5px;
+}
+
+.info-sub-chapter-lessons-list {
+  margin: 0 0 15px;
+  padding-left: 20px;
+}
+
+.info-sub-chapter-lessons-list li {
+  font-size: 14px;
+  color: #717070;
+  margin-bottom: 3px;
+}
+
+.toggle-chapter,
+.toggle-sub-chapter {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.info-chapter-title,
+.info-sub-chapter-title {
+  display: flex;
+  align-items: center;
+}
+
+.lesson-video-count {
+  font-size: 12px;
+  color: #888;
+  margin-left: 5px;
+}
+
+.info-sub-chapter-lessons-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 在现有的 CSS 中添加以下样式 */
+
+.chapter-checkbox,
+.sub-chapter-checkbox,
+.lesson-checkbox {
+  margin-right: 5px;
+}
