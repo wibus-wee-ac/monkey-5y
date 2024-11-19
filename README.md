@@ -29,6 +29,8 @@
 
 [点击这里立即安装](https://github.com/wibus-dev/monkey-5y/raw/refs/heads/gh-pages/5y-lessons-helper.user.js)
 
+如果有问题的话，自己 clone 下来安装后 pnpm dev 就好了，不太想管为什么，能用就行了
+
 ## Author
 
 5Y Helper © Wibus, Released under AGPLv3. Created on Oct 22, 2024
